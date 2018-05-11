@@ -8,7 +8,7 @@ app.use(express.static('server/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use('pethotel', PetHotelRouter);
+app.use('/pethotel', PetHotelRouter);
 
 app.listen(port, function (req, res){
     console.log('Listening on port', port);

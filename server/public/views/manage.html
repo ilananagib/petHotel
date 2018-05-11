@@ -14,3 +14,24 @@
         </li>
     </ul>
 </div>
+<div class="manageOwners">
+    <h3>Add Owner</h3>
+    <input class="ownerName" type="text" placeholder="Owner Name" ng-model="vm.newOwner.owner_name" />
+    <button class=submitButton ng-click="vm.submitOwner()">Submit</button>
+</div>
+<div class="ownersHistory">
+    <h3>Owners</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Number of Pets</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+  <tbody>
+<tr ng-repeat="owner in vm.ownersList">
+    <td>{{owner.owner_name}}</td>
+</tr>
+</tbody>
+</div>

@@ -2,8 +2,7 @@
 
 CREATE TABLE "owners" (
 "id" SERIAL PRIMARY KEY, 
-"first_name" VARCHAR(60),
-"last_name" VARCHAR(80)
+"owner_name" VARCHAR(160)
 );
 
 CREATE TABLE "pets" (
