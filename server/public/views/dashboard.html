@@ -1,0 +1,46 @@
+<div class="header">
+    <h2>Pet Hotel</h2>
+</div>
+<div class="navBar">
+    <ul>
+        <li>
+            <a href="#!/">Home</a>
+        </li>
+        <li>
+            <a href="#!/dashboard">Dashboard</a>
+        </li>
+        <li>
+            <a href="#!/manage">Manage Owners</a>
+        </li>
+    </ul>
+</div>
+<div class="dashboardView">
+    <h3>Add Pet</h3>
+    <input class="petName" type="text" placeholder="Pet Name" />
+    <input class="petColor" type="text" placeholder="Pet Color" />
+    <input class="petBreed" type="text" placeholder="Pet Breed" />
+    <select class="ownerName" type="text" placeholder="Owner Name"></select>
+    <button class=submitButton ng-click="vm.submitPet()">Submit</button>
+</div>
+<div class="dashboardHistory">
+    <h3>History</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Owner</th>
+                <th>Pet</th>
+                <th>Breed</th>
+                <th>Color</th>
+                <th>Checked In</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+  <tbody>
+<tr ng-repeat="pet in vm.petsList">
+    <td><p>{{pets.owner_id}}</p></td>
+    <td><p>{{pets.pet_name}}</p></td>
+    <td><p>{{pets.pet_color}}</p></td>
+    <td><p>{{pets.pet_breed}}</p></td>
+</tr>
+</tbody>
+</div>
