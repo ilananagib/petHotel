@@ -25,7 +25,6 @@ if (process.env.DATABASE_URL) {
         idleTimeoutMillis: 30000
     }
 }
-
 console.log(config);
 
 const pool = new pg.Pool(config);
