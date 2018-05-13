@@ -1,6 +1,6 @@
 console.log('Client is connected!');
 
-const app = angular.module('PetHotelApp', ['ngRoute']); //ngRoute brings in angulat-route
+const app = angular.module('PetHotelApp', ['ngRoute', 'ngMaterial']); 
 
 app.config(['$routeProvider', function($routeProvider) {
     $routeProvider 

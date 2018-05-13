@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const PetHotelRouter = require('./routes/pethotel.router'); //connects router to server
 
 app.use(express.static('server/public'));
-app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use('/pethotel', PetHotelRouter);

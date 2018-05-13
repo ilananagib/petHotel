@@ -13,10 +13,9 @@ CREATE TABLE "pets" (
 "owner_id" INTEGER
 );
 
-CREATE TABLE "visits" (
-"id" SERIAL PRIMARY KEY,
-"check_in" DATE,
-"check_out" DATE,
-"pet_id" INTEGER
-);
+SELECT "owner_name" FROM "owners";
 
+SELECT "pets"."owner_id", "owners"."owner_name",
+COUNT ("pets"."id") FROM "pets"
+JOIN "owners" on "owner_id" = "pets"."owner_id"
+GROUP BY "pets"."owner_id", "owners"."owner_name";

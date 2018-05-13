@@ -16,10 +16,13 @@
 </div>
 <div class="dashboardView">
     <h3>Add Pet</h3>
-    <input class="petName" type="text" placeholder="Pet Name" />
-    <input class="petColor" type="text" placeholder="Pet Color" />
-    <input class="petBreed" type="text" placeholder="Pet Breed" />
-    <select class="ownerName" type="text" placeholder="Owner Name"></select>
+    <input class="petName" type="text" placeholder="Pet Name" ng-model="vm.newPet.pet_name" />
+    <input class="petColor" type="text" placeholder="Pet Color" ng-model="vm.newPet.pet_color"/>
+    <input class="petBreed" type="text" placeholder="Pet Breed" ng-model="vm.newPet.pet_breed"/>
+    <select class="ownerName" type="text" placeholder="Owner Name" ng-model="vm.newPet.owner_id" />
+        <option ng-repeat="owner in vm.ownersList.list" ng-value="owner.id">{{owner.owner_name}}</option>
+    </select>
+    <input class="actions" type="text" placeholder="Actions" ng-model="vm.newPet.checked_in" />
     <button class=submitButton ng-click="vm.submitPet()">Submit</button>
 </div>
 <div class="dashboardHistory">
@@ -29,18 +32,22 @@
             <tr>
                 <th>Owner</th>
                 <th>Pet</th>
-                <th>Breed</th>
                 <th>Color</th>
+                <th>Breed</th>
                 <th>Checked In</th>
                 <th>Actions</th>
             </tr>
         </thead>
   <tbody>
-<tr ng-repeat="pet in vm.petsList">
-    <td><p>{{pets.owner_id}}</p></td>
-    <td><p>{{pets.pet_name}}</p></td>
-    <td><p>{{pets.pet_color}}</p></td>
-    <td><p>{{pets.pet_breed}}</p></td>
+<tr ng-repeat="pet in vm.petsList.list">
+    <td><p>{{owner_id}}</p></td>
+    <td><p>{{pet.pet_name}}</p></td>
+    <td><p>{{pet.pet_color}}</p></td>
+    <td><p>{{pet.pet_breed}}</p></td>
+    <td><p>{{pet.check_in}}</p></td>
+    <td><button ng-click="vm.deleteAction(pet)">Delete</button></td>
+    <td><button ng-show="pet.check_in == 'no'" ng-click="vm.checkInAction(pet)">Check-In</button></td>
+    <td><button ng-show="pet.check_in != 'no'" ng-click="vm.checkOutAction(pet)">Check-Out</button></td>
 </tr>
 </tbody>
 </div>

@@ -29,9 +29,13 @@
                 <th>Actions</th>
             </tr>
         </thead>
-  <tbody>
-<tr ng-repeat="owner in vm.ownersList">
-    <td>{{owner.owner_name}}</td>
-</tr>
-</tbody>
+        <tbody>
+            <tr ng-repeat="owner in vm.ownersList.list">
+                <td>{{owner.owner_name}}</td>
+                <td>{{owner.count}}</td>
+                <td>
+                    <button class=deleteButton ng-click="vm.deleteOwner(owner)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
 </div>
