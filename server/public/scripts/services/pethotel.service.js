@@ -35,6 +35,20 @@ app.service('PetHotelService', ['$http', function($http){
             })
     }
 
+    self.getOwner = function () {
+        $http({
+            method: 'GET',
+            url: '/pethotel/owners',
+        })
+            .then(function (response) {
+                self.ownersList.list = response.data
+                console.log(response.data);
+            })
+            .catch(function (error) {
+                console.log('error on GET', error);
+            })
+    }
+
     self.getPetsNumber = function () {
         console.log('Getting pets number');
         $http({
@@ -108,20 +122,6 @@ app.service('PetHotelService', ['$http', function($http){
             })
             .catch(function (error) {
                 console.log('error on /manage POST', error);
-            })
-    }
-
-    self.getOwner = function () {
-        $http({
-            method: 'GET',
-            url: '/pethotel/owners',
-        })
-            .then(function (response) {
-                self.ownersList.list = response.data
-                console.log(response.data);
-            })
-            .catch(function (error) {
-                console.log('error on GET', error);
             })
     }
 

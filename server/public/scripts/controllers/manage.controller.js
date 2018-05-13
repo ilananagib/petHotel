@@ -1,4 +1,4 @@
-app.controller('ManageController', ['$http', function ($http) {
+app.controller('ManageController', ['PetHotelService', function (PetHotelService) {
     console.log('ManageController is connected');
     var self = this;
     self.ownersList = PetHotelService.ownersList;
@@ -13,4 +13,5 @@ app.controller('ManageController', ['$http', function ($http) {
     self.getPetsNumber();
 
     self.deleteOwner = PetHotelService.deleteOwner;
+
 }]);
