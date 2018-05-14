@@ -7,6 +7,7 @@
     "angular": "^1.6.10",
     "angular-animate": "^1.7.0",
     "angular-aria": "^1.7.0",
+    "angular-jk-carousel": "^0.5.0",
     "angular-material": "^1.1.9",
     "angular-messages": "^1.7.0",
     "angular-route": "^1.6.10",

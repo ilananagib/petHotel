@@ -4,6 +4,8 @@ app.service('PetHotelService', ['$http', function($http){
     self.ownersList = { list: [] };
     self.newPet = { check_in: 'no' };
     self.newOwner = { list: [] };
+   
+
 
     self.submitPet = function () {
         console.log('Submitting owners!');
@@ -155,6 +157,5 @@ app.service('PetHotelService', ['$http', function($http){
                 console.log('error on / owner DELETE', error);
             })
     }
-
 
 }]);

@@ -33,7 +33,29 @@
   .header-right {
     float: right;
   }
- 
 
+  .footer {
+    background-color: #f1f1f1;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: black;
+    text-align: center;
+    }
 
+    .dashboardBody {
+       margin-left: 200px;
+    }
 
+    .dashboardHistory {
+        margin-left: 200px;
+    }
+
+    .manageOwners {
+        margin-left: 200px;
+    }
+
+    .ownersHistory {
+        margin-left: 200px;
+    }

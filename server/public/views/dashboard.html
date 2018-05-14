@@ -6,7 +6,7 @@
     <a  href="#!/manage">Owners</a>
 </div>
 </div>
-<div class="dashboardView">
+<div class="dashboardBody">
     <h3>Add Pet</h3>
     <input class="petName" type="text" placeholder="Pet Name" ng-model="vm.newPet.pet_name" />
     <input class="petColor" type="text" placeholder="Pet Color" ng-model="vm.newPet.pet_color"/>
@@ -14,7 +14,6 @@
     <select class="ownerName" type="text" placeholder="Owner Name" ng-model="vm.newPet.owner_id" />
         <option ng-repeat="owner in vm.ownersList.list" ng-value="owner.id">{{owner.owner_name}}</option>
     </select>
-    <input class="actions" type="text" placeholder="Actions" ng-model="vm.newPet.checked_in" />
     <button class=submitButton ng-click="vm.submitPet()">Submit</button>
 </div>
 <div class="dashboardHistory">
@@ -32,7 +31,6 @@
         </thead>
   <tbody>
 <tr ng-repeat="pet in vm.petsList.list">
-    <td><p>{{owner_id}}</p></td>
     <td><p>{{pet.pet_name}}</p></td>
     <td><p>{{pet.pet_color}}</p></td>
     <td><p>{{pet.pet_breed}}</p></td>
@@ -43,3 +41,8 @@
 </tr>
 </tbody>
 </div>
+<div class="footer" layout="column" layout-align="center center">
+    <h2>Luke's Pet Hotel</h2>
+    <p>301 S 4th Ave - Minneapolis, MN 55415</p>
+</div>
+</footer>
